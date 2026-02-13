@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReputazioneAI - Recensioni Automatiche</title>
+    <title>ReputazioneAI - Sistema Automatico di Gestione Recensioni</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg-dark: #0f0f0f;
@@ -49,7 +51,33 @@
             border-bottom: 1px solid rgba(0, 229, 255, 0.1);
         }
 
-        .logo {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            position: relative;
+            animation: floatLogo 3s ease-in-out infinite;
+        }
+
+        @keyframes floatLogo {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .logo-text {
             font-size: 1.5rem;
             font-weight: 800;
             background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
@@ -256,7 +284,7 @@
             background: var(--bg-secondary);
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 
+            box-shadow:
                 0 30px 80px rgba(0, 0, 0, 0.8),
                 0 0 100px rgba(0, 229, 255, 0.2);
             border: 1px solid rgba(0, 229, 255, 0.2);
@@ -282,9 +310,17 @@
             border-radius: 50%;
         }
 
-        .dot.red { background: #ff5f57; }
-        .dot.yellow { background: #ffbd2e; }
-        .dot.green { background: #28ca42; }
+        .dot.red {
+            background: #ff5f57;
+        }
+
+        .dot.yellow {
+            background: #ffbd2e;
+        }
+
+        .dot.green {
+            background: #28ca42;
+        }
 
         .browser-url {
             flex: 1;
@@ -332,8 +368,18 @@
         }
 
         @keyframes slideScreen {
-            0%, 20% { opacity: 1; transform: translateX(0); }
-            25%, 100% { opacity: 0; transform: translateX(-100%); }
+
+            0%,
+            20% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            25%,
+            100% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
         }
 
         /* Dashboard Screen 1: Statistics */
@@ -392,15 +438,41 @@
             animation: growBar 2s ease infinite;
         }
 
-        .chart-bar:nth-child(1) { height: 40%; animation-delay: 0s; }
-        .chart-bar:nth-child(2) { height: 70%; animation-delay: 0.2s; }
-        .chart-bar:nth-child(3) { height: 55%; animation-delay: 0.4s; }
-        .chart-bar:nth-child(4) { height: 85%; animation-delay: 0.6s; }
-        .chart-bar:nth-child(5) { height: 95%; animation-delay: 0.8s; }
+        .chart-bar:nth-child(1) {
+            height: 40%;
+            animation-delay: 0s;
+        }
+
+        .chart-bar:nth-child(2) {
+            height: 70%;
+            animation-delay: 0.2s;
+        }
+
+        .chart-bar:nth-child(3) {
+            height: 55%;
+            animation-delay: 0.4s;
+        }
+
+        .chart-bar:nth-child(4) {
+            height: 85%;
+            animation-delay: 0.6s;
+        }
+
+        .chart-bar:nth-child(5) {
+            height: 95%;
+            animation-delay: 0.8s;
+        }
 
         @keyframes growBar {
-            0%, 100% { transform: scaleY(1); }
-            50% { transform: scaleY(1.1); }
+
+            0%,
+            100% {
+                transform: scaleY(1);
+            }
+
+            50% {
+                transform: scaleY(1.1);
+            }
         }
 
         /* Dashboard Screen 2: Review Flow */
@@ -449,6 +521,7 @@
                 opacity: 0;
                 transform: translateX(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -510,6 +583,7 @@
                 opacity: 0;
                 transform: scale(0.8) translateY(20px);
             }
+
             100% {
                 opacity: 1;
                 transform: scale(1) translateY(0);
@@ -567,6 +641,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -575,8 +650,17 @@
 
         /* Animations */
         @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.1); opacity: 0.8; }
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
         }
 
         @keyframes fadeInLeft {
@@ -584,6 +668,7 @@
                 opacity: 0;
                 transform: translateX(-50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -595,6 +680,7 @@
                 opacity: 0;
                 transform: translateX(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -747,13 +833,29 @@
             margin-bottom: 3rem;
         }
 
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-logo-icon {
+            width: 40px;
+            height: 40px;
+        }
+
         .footer-brand h3 {
             font-size: 1.8rem;
             font-weight: 800;
             background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
         }
 
         .footer-brand p {
@@ -838,14 +940,37 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="logo">ReputazioneAI</div>
+        <div class="logo-container">
+            <!-- Logo Icon SVG -->
+            <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#00e5ff;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#b537f2;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <!-- Star shape -->
+                <path d="M50 10 L61 38 L90 38 L67 55 L78 83 L50 66 L22 83 L33 55 L10 38 L39 38 Z"
+                    fill="url(#logoGradient)" stroke="url(#logoGradient)" stroke-width="2" />
+                <!-- AI Circuit pattern overlay -->
+                <circle cx="50" cy="50" r="15" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" />
+                <circle cx="50" cy="50" r="4" fill="#ffffff" />
+                <line x1="50" y1="35" x2="50" y2="42" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+                <line x1="50" y1="58" x2="50" y2="65" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+                <line x1="35" y1="50" x2="42" y2="50" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+                <line x1="58" y1="50" x2="65" y2="50" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+            </svg>
+            <span class="logo-text">ReputazioneAI</span>
+        </div>
         <ul class="nav-links">
             <li><a href="#features">Funzionalità</a></li>
-            <li><a href="#come-funziona">Come Funziona</a></li>
             <li><a href="#pricing">Prezzi</a></li>
+            <li><a href="https://wa.me/393917052423?text=Ciao!%20Vorrei%20info%20su%20ReputazioneAI"
+                    target="_blank">Contatti</a></li>
         </ul>
         <a href="#demo" class="nav-cta">Richiedi Demo</a>
     </nav>
@@ -856,11 +981,11 @@
             <div class="hero-text">
                 <span class="hero-tag">✨ Sistema Automatizzato</span>
                 <h1>
-                    Genera <span class="gradient-text">recensioni 5 stelle</span> 
+                    Genera <span class="gradient-text">recensioni 5 stelle</span>
                     in automatico
                 </h1>
                 <p class="hero-subtitle">
-                    Il sistema intelligente che trasforma ogni cliente soddisfatto 
+                    Il sistema intelligente che trasforma ogni cliente soddisfatto
                     in una recensione Google, senza che tu muova un dito.
                 </p>
                 <div class="hero-stats">
@@ -964,7 +1089,8 @@
                                     <div class="notification-icon">⭐</div>
                                     <div class="notification-content">
                                         <div class="notification-title">Nuova recensione 5 stelle!</div>
-                                        <div class="notification-text">Marco R. ha lasciato una recensione positiva</div>
+                                        <div class="notification-text">Marco R. ha lasciato una recensione positiva
+                                        </div>
                                     </div>
                                     <div class="notification-time">2 min fa</div>
                                 </div>
@@ -996,7 +1122,7 @@
                                         <div class="review-date">2 giorni fa</div>
                                     </div>
                                     <div class="review-text">
-                                        "Servizio eccellente! Personale competente e disponibile. 
+                                        "Servizio eccellente! Personale competente e disponibile.
                                         Consiglio vivamente a tutti."
                                     </div>
                                     <div class="review-author">— Laura B.</div>
@@ -1007,7 +1133,7 @@
                                         <div class="review-date">4 giorni fa</div>
                                     </div>
                                     <div class="review-text">
-                                        "Esperienza fantastica dall'inizio alla fine. 
+                                        "Esperienza fantastica dall'inizio alla fine.
                                         Tornerò sicuramente!"
                                     </div>
                                     <div class="review-author">— Andrea M.</div>
@@ -1034,7 +1160,7 @@
                 <div class="feature-icon">🛡️</div>
                 <h3>Protezione Reputazione</h3>
                 <p>
-                    Intercetta le recensioni negative prima che finiscano su Google. 
+                    Intercetta le recensioni negative prima che finiscano su Google.
                     Trasforma ogni problema in un'opportunità di miglioramento.
                 </p>
             </div>
@@ -1042,7 +1168,7 @@
                 <div class="feature-icon">🤖</div>
                 <h3>AI Integrata</h3>
                 <p>
-                    ChatGPT scrive risposte professionali alle recensioni. 
+                    ChatGPT scrive risposte professionali alle recensioni.
                     Tu approvi con un click, senza perdere tempo.
                 </p>
             </div>
@@ -1050,7 +1176,7 @@
                 <div class="feature-icon">📊</div>
                 <h3>Analytics Avanzati</h3>
                 <p>
-                    Dashboard completa con statistiche, trend e confronto competitivo. 
+                    Dashboard completa con statistiche, trend e confronto competitivo.
                     Monitora il ROI in tempo reale.
                 </p>
             </div>
@@ -1058,7 +1184,7 @@
                 <div class="feature-icon">⚡</div>
                 <h3>Setup Immediato</h3>
                 <p>
-                    Configurazione in 48 ore. Integrazione con il tuo gestionale 
+                    Configurazione in 48 ore. Integrazione con il tuo gestionale
                     o uso stand-alone. Semplicissimo.
                 </p>
             </div>
@@ -1066,7 +1192,7 @@
                 <div class="feature-icon">📱</div>
                 <h3>SMS & WhatsApp</h3>
                 <p>
-                    98% di tasso di apertura. I tuoi clienti ricevono la richiesta 
+                    98% di tasso di apertura. I tuoi clienti ricevono la richiesta
                     dove sono più attivi, al momento perfetto.
                 </p>
             </div>
@@ -1074,9 +1200,139 @@
                 <div class="feature-icon">🎯</div>
                 <h3>Zero Sforzo</h3>
                 <p>
-                    Una volta installato lavora da solo H24. Tu ti concentri 
+                    Una volta installato lavora da solo H24. Tu ti concentri
                     sul tuo business, noi sulla tua reputazione.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="features-section" id="pricing" style="background: var(--bg-dark);">
+        <div class="section-header">
+            <span class="section-tag">Investimento Trasparente</span>
+            <h2 class="section-title">Prezzi chiari, risultati garantiti</h2>
+            <p class="section-subtitle">
+                Un investimento che si ripaga da solo con 1-2 clienti in più all'anno
+            </p>
+        </div>
+        <div
+            style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem;">
+            <!-- Setup Card -->
+            <div class="feature-card"
+                style="background: linear-gradient(135deg, rgba(0, 229, 255, 0.05), rgba(181, 55, 242, 0.05)); border: 2px solid rgba(0, 229, 255, 0.3);">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <div
+                        style="font-size: 0.9rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">
+                        Setup Iniziale</div>
+                    <div
+                        style="font-size: 4rem; font-weight: 800; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">
+                        €497</div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">Una tantum</div>
+                </div>
+                <div style="background: var(--bg-card); border-radius: 15px; padding: 2rem; margin-bottom: 2rem;">
+                    <h4 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--text-primary);">Cosa Include:</h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+                        <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
+                            <span style="color: var(--success); font-size: 1.2rem; flex-shrink: 0;">✓</span>
+                            <span style="color: var(--text-secondary); line-height: 1.6;">Configurazione completa del
+                                software</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
+                            <span style="color: var(--success); font-size: 1.2rem; flex-shrink: 0;">✓</span>
+                            <span style="color: var(--text-secondary); line-height: 1.6;">Setup bot WhatsApp
+                                personalizzato</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
+                            <span style="color: var(--success); font-size: 1.2rem; flex-shrink: 0;">✓</span>
+                            <span style="color: var(--text-secondary); line-height: 1.6;">Copywriting messaggi su
+                                misura</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
+                            <span style="color: var(--success); font-size: 1.2rem; flex-shrink: 0;">✓</span>
+                            <span style="color: var(--text-secondary); line-height: 1.6;">Integrazione Google Business
+                                Profile</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
+                            <span style="color: var(--success); font-size: 1.2rem; flex-shrink: 0;">✓</span>
+                            <span style="color: var(--text-secondary); line-height: 1.6;">Training completo del team (1
+                                ora)</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
+                            <span style="color: var(--success); font-size: 1.2rem; flex-shrink: 0;">✓</span>
+                            <span style="color: var(--text-secondary); line-height: 1.6;">Attivazione in 48 ore</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Monthly Card -->
+            <div class="feature-card"
+                style="background: linear-gradient(135deg, rgba(0, 229, 255, 0.1), rgba(181, 55, 242, 0.1)); border: 3px solid var(--accent-cyan); position: relative;">
+                <div
+                    style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple)); color: white; padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">
+                    Richiesto</div>
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <div
+                        style="font-size: 0.9rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">
+                        Canone Mensile</div>
+                    <div
+                        style="font-size: 4rem; font-weight: 800; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">
+                        €147</div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">al mese</div>
+                </div>
+                <div style="background: var(--bg-card); border-radius: 15px; padding: 2rem; margin-bottom: 2rem;">
+                    <h4 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--text-primary);">Cosa Include:</h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+                        <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
+                            <span style="color: var(--success); font-size: 1.2rem; flex-shrink: 0;">✓</span>
+                            <span style="color: var(--text-secondary); line-height: 1.6;">Manutenzione software
+                                24/7</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
+                            <span style="color: var(--success); font-size: 1.2rem; flex-shrink: 0;">✓</span>
+                            <span style="color: var(--text-secondary); line-height: 1.6;">Tutti i costi di invio
+                                messaggi inclusi</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
+                            <span style="color: var(--success); font-size: 1.2rem; flex-shrink: 0;">✓</span>
+                            <span style="color: var(--text-secondary); line-height: 1.6;">Report mensile di crescita
+                                dettagliato</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
+                            <span style="color: var(--success); font-size: 1.2rem; flex-shrink: 0;">✓</span>
+                            <span style="color: var(--text-secondary); line-height: 1.6;">Monitoraggio
+                                concorrenti</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
+                            <span style="color: var(--success); font-size: 1.2rem; flex-shrink: 0;">✓</span>
+                            <span style="color: var(--text-secondary); line-height: 1.6;">Supporto prioritario via
+                                WhatsApp</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
+                            <span style="color: var(--success); font-size: 1.2rem; flex-shrink: 0;">✓</span>
+                            <span style="color: var(--text-secondary); line-height: 1.6;">Aggiornamenti AI
+                                automatici</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROI Calculation -->
+        <div
+            style="max-width: 800px; margin: 4rem auto 0; text-align: center; background: var(--bg-card); border: 1px solid rgba(0, 229, 255, 0.2); border-radius: 20px; padding: 3rem;">
+            <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--text-primary);">💡 Il calcolo è semplice
+            </h3>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+                Se il tuo servizio vale <strong style="color: var(--accent-cyan);">€5.000-€20.000</strong> per cliente,
+                ti basta <strong style="color: var(--accent-cyan);">1-2 clienti in più all'anno</strong> per coprire
+                l'investimento totale. Il resto è <strong style="color: var(--success);">profitto puro</strong>.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="#demo" class="btn-primary">Richiedi Demo Gratuita</a>
+                <a href="https://wa.me/393917052423?text=Ciao!%20Vorrei%20info%20su%20ReputazioneAI"
+                    class="btn-secondary" target="_blank">Contattaci su WhatsApp</a>
             </div>
         </div>
     </section>
@@ -1086,11 +1342,12 @@
         <div class="cta-content">
             <h2>Pronto a dominare Google Maps?</h2>
             <p>
-                Richiedi una demo gratuita. Configuriamo tutto in 48 ore. 
+                Richiedi una demo gratuita. Configuriamo tutto in 48 ore.
                 Nessun impegno, nessuna carta di credito richiesta.
             </p>
             <div class="hero-cta-group" style="justify-content: center;">
-                <a href="mailto:info@reputazioneai.it" class="btn-primary">Richiedi Demo Gratuita</a>
+                <a href="mailto:derienzogabriele@gmail.com?subject=Richiesta%20Demo%20ReputazioneAI&body=Ciao!%0A%0AVorrei%20richiedere%20una%20demo%20gratuita%20di%20ReputazioneAI.%0A%0ANome:%0AAttività:%0ATelefono:%0A%0AGrazie!"
+                    class="btn-primary">Richiedi Demo Gratuita</a>
             </div>
         </div>
     </section>
@@ -1099,9 +1356,28 @@
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
-                <h3>ReputazioneAI</h3>
+                <div class="footer-logo">
+                    <!-- Footer Logo Icon -->
+                    <svg class="footer-logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00e5ff;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#b537f2;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M50 10 L61 38 L90 38 L67 55 L78 83 L50 66 L22 83 L33 55 L10 38 L39 38 Z"
+                            fill="url(#footerLogoGradient)" stroke="url(#footerLogoGradient)" stroke-width="2" />
+                        <circle cx="50" cy="50" r="15" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" />
+                        <circle cx="50" cy="50" r="4" fill="#ffffff" />
+                        <line x1="50" y1="35" x2="50" y2="42" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+                        <line x1="50" y1="58" x2="50" y2="65" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+                        <line x1="35" y1="50" x2="42" y2="50" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+                        <line x1="58" y1="50" x2="65" y2="50" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+                    </svg>
+                    <h3>ReputazioneAI</h3>
+                </div>
                 <p>
-                    Il sistema automatizzato che trasforma i tuoi clienti soddisfatti 
+                    Il sistema automatizzato che trasforma i tuoi clienti soddisfatti
                     in recensioni 5 stelle su Google. Zero sforzo, massimo risultato.
                 </p>
             </div>
@@ -1124,10 +1400,10 @@
                 </ul>
             </div>
             <div class="footer-column">
-                <h4>Azienda</h4>
+                <h4>Contatti</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Chi Siamo</a></li>
-                    <li><a href="#">Contatti</a></li>
+                    <li><a href="tel:+393917052423">📞 +39 391 705 2423</a></li>
+                    <li><a href="mailto:derienzogabriele@gmail.com">✉️ derienzogabriele@gmail.com</a></li>
                     <li><a href="#">Privacy</a></li>
                     <li><a href="#">Termini</a></li>
                 </ul>
@@ -1151,4 +1427,5 @@
         });
     </script>
 </body>
+
 </html>
