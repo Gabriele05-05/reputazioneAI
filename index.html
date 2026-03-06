@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReputazioneAI - Sistema Automatico di Gestione Recensioni</title>
+
+    <!-- SEO & Social Meta Tags -->
+    <meta property="og:title" content="ReputazioneAI - Sistema Automatico di Gestione Recensioni">
+    <meta property="og:description"
+        content="Il sistema intelligente che trasforma ogni cliente soddisfatto in una recensione Google, senza che tu muova un dito.">
+    <meta property="og:image" content="https://reputazioneai.it/Logo_ReputazioneAI.png">
+    <meta property="og:url" content="https://reputazioneai.it">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Logo_ReputazioneAI.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg-dark: #0f0f0f;
@@ -19,6 +34,10 @@
             --text-secondary: #a0a0a0;
             --success: #00ff88;
             --warning: #ffc107;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         * {
@@ -64,8 +83,15 @@
         }
 
         @keyframes floatLogo {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
         }
 
         .logo-text {
@@ -275,7 +301,7 @@
             background: var(--bg-secondary);
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 
+            box-shadow:
                 0 30px 80px rgba(0, 0, 0, 0.8),
                 0 0 100px rgba(0, 229, 255, 0.2);
             border: 1px solid rgba(0, 229, 255, 0.2);
@@ -301,9 +327,17 @@
             border-radius: 50%;
         }
 
-        .dot.red { background: #ff5f57; }
-        .dot.yellow { background: #ffbd2e; }
-        .dot.green { background: #28ca42; }
+        .dot.red {
+            background: #ff5f57;
+        }
+
+        .dot.yellow {
+            background: #ffbd2e;
+        }
+
+        .dot.green {
+            background: #28ca42;
+        }
 
         .browser-url {
             flex: 1;
@@ -351,8 +385,18 @@
         }
 
         @keyframes slideScreen {
-            0%, 20% { opacity: 1; transform: translateX(0); }
-            25%, 100% { opacity: 0; transform: translateX(-100%); }
+
+            0%,
+            20% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            25%,
+            100% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
         }
 
         /* Dashboard Screen 1: Statistics */
@@ -411,15 +455,41 @@
             animation: growBar 2s ease infinite;
         }
 
-        .chart-bar:nth-child(1) { height: 40%; animation-delay: 0s; }
-        .chart-bar:nth-child(2) { height: 70%; animation-delay: 0.2s; }
-        .chart-bar:nth-child(3) { height: 55%; animation-delay: 0.4s; }
-        .chart-bar:nth-child(4) { height: 85%; animation-delay: 0.6s; }
-        .chart-bar:nth-child(5) { height: 95%; animation-delay: 0.8s; }
+        .chart-bar:nth-child(1) {
+            height: 40%;
+            animation-delay: 0s;
+        }
+
+        .chart-bar:nth-child(2) {
+            height: 70%;
+            animation-delay: 0.2s;
+        }
+
+        .chart-bar:nth-child(3) {
+            height: 55%;
+            animation-delay: 0.4s;
+        }
+
+        .chart-bar:nth-child(4) {
+            height: 85%;
+            animation-delay: 0.6s;
+        }
+
+        .chart-bar:nth-child(5) {
+            height: 95%;
+            animation-delay: 0.8s;
+        }
 
         @keyframes growBar {
-            0%, 100% { transform: scaleY(1); }
-            50% { transform: scaleY(1.1); }
+
+            0%,
+            100% {
+                transform: scaleY(1);
+            }
+
+            50% {
+                transform: scaleY(1.1);
+            }
         }
 
         /* Dashboard Screen 2: Review Flow */
@@ -468,6 +538,7 @@
                 opacity: 0;
                 transform: translateX(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -529,6 +600,7 @@
                 opacity: 0;
                 transform: scale(0.8) translateY(20px);
             }
+
             100% {
                 opacity: 1;
                 transform: scale(1) translateY(0);
@@ -586,6 +658,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -594,8 +667,17 @@
 
         /* Animations */
         @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.1); opacity: 0.8; }
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
         }
 
         @keyframes fadeInLeft {
@@ -603,6 +685,7 @@
                 opacity: 0;
                 transform: translateX(-50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -614,6 +697,7 @@
                 opacity: 0;
                 transform: translateX(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -826,6 +910,84 @@
             color: var(--text-secondary);
         }
 
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(15, 15, 15, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 999;
+            display: flex;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s ease;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .mobile-menu-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            transform: translateY(30px);
+            transition: all 0.4s ease;
+        }
+
+        .mobile-menu.active .mobile-menu-content {
+            transform: translateY(0);
+        }
+
+        .mobile-link {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-link:hover {
+            color: var(--accent-cyan);
+        }
+
         /* Responsive */
         @media (max-width: 1024px) {
             .hero-container {
@@ -842,8 +1004,13 @@
                 padding: 1rem 5%;
             }
 
-            .nav-links {
+            .nav-links,
+            .nav-cta {
                 display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
             }
 
             .hero {
@@ -875,6 +1042,138 @@
                 display: none;
             }
         }
+
+        /* Testimonials */
+        .testimonials-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .testimonial-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 229, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 229, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 229, 255, 0.1);
+        }
+
+        .testimonial-stars {
+            color: var(--warning);
+            font-size: 1.2rem;
+            letter-spacing: 0.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--bg-dark);
+        }
+
+        .author-info h4 {
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+            color: var(--text-primary);
+        }
+
+        .author-info p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 229, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active {
+            border-color: rgba(0, 229, 255, 0.4);
+            box-shadow: 0 5px 20px rgba(0, 229, 255, 0.1);
+        }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--accent-cyan);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--accent-cyan);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+            color: var(--accent-pink);
+        }
+
+        .faq-answer {
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            transition: all 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 2rem 1.5rem;
+            max-height: 500px;
+        }
+
         /* Setup Card Responsive */
         .setup-card {
             display: grid;
@@ -908,6 +1207,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav>
@@ -921,27 +1221,42 @@
                     </linearGradient>
                 </defs>
                 <!-- Star shape -->
-                <path d="M50 10 L61 38 L90 38 L67 55 L78 83 L50 66 L22 83 L33 55 L10 38 L39 38 Z" 
-                      fill="url(#logoGradient)" 
-                      stroke="url(#logoGradient)" 
-                      stroke-width="2"/>
+                <path d="M50 10 L61 38 L90 38 L67 55 L78 83 L50 66 L22 83 L33 55 L10 38 L39 38 Z"
+                    fill="url(#logoGradient)" stroke="url(#logoGradient)" stroke-width="2" />
                 <!-- AI Circuit pattern overlay -->
-                <circle cx="50" cy="50" r="15" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
-                <circle cx="50" cy="50" r="4" fill="#ffffff"/>
-                <line x1="50" y1="35" x2="50" y2="42" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
-                <line x1="50" y1="58" x2="50" y2="65" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
-                <line x1="35" y1="50" x2="42" y2="50" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
-                <line x1="58" y1="50" x2="65" y2="50" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+                <circle cx="50" cy="50" r="15" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" />
+                <circle cx="50" cy="50" r="4" fill="#ffffff" />
+                <line x1="50" y1="35" x2="50" y2="42" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+                <line x1="50" y1="58" x2="50" y2="65" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+                <line x1="35" y1="50" x2="42" y2="50" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+                <line x1="58" y1="50" x2="65" y2="50" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
             </svg>
             <span class="logo-text">ReputazioneAI</span>
         </div>
         <ul class="nav-links">
             <li><a href="#features">Funzionalità</a></li>
             <li><a href="#pricing">Prezzi</a></li>
-            <li><a href="https://wa.me/393917052423?text=Ciao!%20Vorrei%20info%20su%20ReputazioneAI" target="_blank">Contatti</a></li>
+            <li><a href="https://wa.me/393917052423?text=Ciao!%20Vorrei%20info%20su%20ReputazioneAI"
+                    target="_blank">Contatti</a></li>
         </ul>
         <a href="#demo" class="nav-cta">Richiedi Demo</a>
+        <div class="menu-toggle" id="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="#features" class="mobile-link">Funzionalità</a>
+            <a href="#pricing" class="mobile-link">Prezzi</a>
+            <a href="https://wa.me/393917052423?text=Ciao!%20Vorrei%20info%20su%20ReputazioneAI" target="_blank"
+                class="mobile-link">Contatti</a>
+            <a href="#demo" class="btn-primary" style="margin-top: 2rem;">Richiedi Demo</a>
+        </div>
+    </div>
 
     <!-- Hero with Animated Browser -->
     <section class="hero">
@@ -949,24 +1264,24 @@
             <div class="hero-text">
                 <span class="hero-tag">✨ Sistema Automatizzato</span>
                 <h1>
-                    Genera <span class="gradient-text">recensioni 5 stelle</span> 
+                    Genera <span class="gradient-text">recensioni 5 stelle</span>
                     in automatico
                 </h1>
                 <p class="hero-subtitle">
-                    Il sistema intelligente che trasforma ogni cliente soddisfatto 
+                    Il sistema intelligente che trasforma ogni cliente soddisfatto
                     in una recensione Google, senza che tu muova un dito.
                 </p>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <div class="stat-number">98%</div>
+                        <div class="stat-number" data-target="98" data-suffix="%">0%</div>
                         <div class="stat-label">Tasso apertura</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">3x</div>
+                        <div class="stat-number" data-target="3" data-suffix="x">0x</div>
                         <div class="stat-label">Più recensioni</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">24/7</div>
+                        <div class="stat-number" data-target="24" data-suffix="/7">0/7</div>
                         <div class="stat-label">Sempre attivo</div>
                     </div>
                 </div>
@@ -1057,7 +1372,8 @@
                                     <div class="notification-icon">⭐</div>
                                     <div class="notification-content">
                                         <div class="notification-title">Nuova recensione 5 stelle!</div>
-                                        <div class="notification-text">Marco R. ha lasciato una recensione positiva</div>
+                                        <div class="notification-text">Marco R. ha lasciato una recensione positiva
+                                        </div>
                                     </div>
                                     <div class="notification-time">2 min fa</div>
                                 </div>
@@ -1089,7 +1405,7 @@
                                         <div class="review-date">2 giorni fa</div>
                                     </div>
                                     <div class="review-text">
-                                        "Servizio eccellente! Personale competente e disponibile. 
+                                        "Servizio eccellente! Personale competente e disponibile.
                                         Consiglio vivamente a tutti."
                                     </div>
                                     <div class="review-author">— Laura B.</div>
@@ -1100,7 +1416,7 @@
                                         <div class="review-date">4 giorni fa</div>
                                     </div>
                                     <div class="review-text">
-                                        "Esperienza fantastica dall'inizio alla fine. 
+                                        "Esperienza fantastica dall'inizio alla fine.
                                         Tornerò sicuramente!"
                                     </div>
                                     <div class="review-author">— Andrea M.</div>
@@ -1127,7 +1443,7 @@
                 <div class="feature-icon">🛡️</div>
                 <h3>Protezione Reputazione</h3>
                 <p>
-                    Intercetta le recensioni negative prima che finiscano su Google. 
+                    Intercetta le recensioni negative prima che finiscano su Google.
                     Trasforma ogni problema in un'opportunità di miglioramento.
                 </p>
             </div>
@@ -1135,7 +1451,7 @@
                 <div class="feature-icon">🤖</div>
                 <h3>AI Integrata</h3>
                 <p>
-                    ChatGPT scrive risposte professionali alle recensioni. 
+                    ChatGPT scrive risposte professionali alle recensioni.
                     Tu approvi con un click, senza perdere tempo.
                 </p>
             </div>
@@ -1143,7 +1459,7 @@
                 <div class="feature-icon">📊</div>
                 <h3>Analytics Avanzati</h3>
                 <p>
-                    Dashboard completa con statistiche, trend e confronto competitivo. 
+                    Dashboard completa con statistiche, trend e confronto competitivo.
                     Monitora il ROI in tempo reale.
                 </p>
             </div>
@@ -1151,7 +1467,7 @@
                 <div class="feature-icon">⚡</div>
                 <h3>Setup Immediato</h3>
                 <p>
-                    Configurazione in 48 ore. Integrazione con il tuo gestionale 
+                    Configurazione in 48 ore. Integrazione con il tuo gestionale
                     o uso stand-alone. Semplicissimo.
                 </p>
             </div>
@@ -1159,7 +1475,7 @@
                 <div class="feature-icon">📱</div>
                 <h3>SMS & WhatsApp</h3>
                 <p>
-                    98% di tasso di apertura. I tuoi clienti ricevono la richiesta 
+                    98% di tasso di apertura. I tuoi clienti ricevono la richiesta
                     dove sono più attivi, al momento perfetto.
                 </p>
             </div>
@@ -1167,7 +1483,7 @@
                 <div class="feature-icon">🎯</div>
                 <h3>Zero Sforzo</h3>
                 <p>
-                    Una volta installato lavora da solo H24. Tu ti concentri 
+                    Una volta installato lavora da solo H24. Tu ti concentri
                     sul tuo business, noi sulla tua reputazione.
                 </p>
             </div>
@@ -1186,70 +1502,122 @@
 
         <!-- Setup Iniziale -->
         <div style="max-width: 900px; margin: 0 auto 3rem;">
-            <div class="feature-card setup-card" style="background: linear-gradient(135deg, rgba(0, 229, 255, 0.05), rgba(181, 55, 242, 0.05)); border: 2px solid rgba(0, 229, 255, 0.3);">
+            <div class="feature-card setup-card"
+                style="background: linear-gradient(135deg, rgba(0, 229, 255, 0.05), rgba(181, 55, 242, 0.05)); border: 2px solid rgba(0, 229, 255, 0.3);">
                 <div class="setup-price" style="text-align: center;">
-                    <div style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.8rem;">Setup Iniziale</div>
-                    <div style="font-size: 3.5rem; font-weight: 800; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">€497</div>
+                    <div
+                        style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.8rem;">
+                        Setup Iniziale</div>
+                    <div
+                        style="font-size: 3.5rem; font-weight: 800; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">
+                        €497</div>
                     <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.4rem;">Una tantum</div>
                 </div>
                 <ul class="setup-list">
-                    <li style="display: flex; align-items: flex-start; gap: 0.7rem;"><span style="color: var(--success); flex-shrink: 0;">✓</span><span style="color: var(--text-secondary); font-size: 0.9rem;">Configurazione completa del software</span></li>
-                    <li style="display: flex; align-items: flex-start; gap: 0.7rem;"><span style="color: var(--success); flex-shrink: 0;">✓</span><span style="color: var(--text-secondary); font-size: 0.9rem;">Setup bot WhatsApp personalizzato</span></li>
-                    <li style="display: flex; align-items: flex-start; gap: 0.7rem;"><span style="color: var(--success); flex-shrink: 0;">✓</span><span style="color: var(--text-secondary); font-size: 0.9rem;">Copywriting messaggi su misura</span></li>
-                    <li style="display: flex; align-items: flex-start; gap: 0.7rem;"><span style="color: var(--success); flex-shrink: 0;">✓</span><span style="color: var(--text-secondary); font-size: 0.9rem;">Integrazione Google Business Profile</span></li>
-                    <li style="display: flex; align-items: flex-start; gap: 0.7rem;"><span style="color: var(--success); flex-shrink: 0;">✓</span><span style="color: var(--text-secondary); font-size: 0.9rem;">Training completo del team (1 ora)</span></li>
-                    <li style="display: flex; align-items: flex-start; gap: 0.7rem;"><span style="color: var(--success); flex-shrink: 0;">✓</span><span style="color: var(--text-secondary); font-size: 0.9rem;">Attivazione in 48 ore</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 0.7rem;"><span
+                            style="color: var(--success); flex-shrink: 0;">✓</span><span
+                            style="color: var(--text-secondary); font-size: 0.9rem;">Configurazione completa del
+                            software</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 0.7rem;"><span
+                            style="color: var(--success); flex-shrink: 0;">✓</span><span
+                            style="color: var(--text-secondary); font-size: 0.9rem;">Setup bot WhatsApp
+                            personalizzato</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 0.7rem;"><span
+                            style="color: var(--success); flex-shrink: 0;">✓</span><span
+                            style="color: var(--text-secondary); font-size: 0.9rem;">Copywriting messaggi su
+                            misura</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 0.7rem;"><span
+                            style="color: var(--success); flex-shrink: 0;">✓</span><span
+                            style="color: var(--text-secondary); font-size: 0.9rem;">Integrazione Google Business
+                            Profile</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 0.7rem;"><span
+                            style="color: var(--success); flex-shrink: 0;">✓</span><span
+                            style="color: var(--text-secondary); font-size: 0.9rem;">Training completo del team (1
+                            ora)</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 0.7rem;"><span
+                            style="color: var(--success); flex-shrink: 0;">✓</span><span
+                            style="color: var(--text-secondary); font-size: 0.9rem;">Attivazione in 48 ore</span></li>
                 </ul>
             </div>
         </div>
 
         <div style="max-width: 900px; margin: 0 auto 3rem; display: flex; align-items: center; gap: 1.5rem;">
             <div style="flex: 1; height: 1px; background: rgba(0, 229, 255, 0.2);"></div>
-            <div style="background: rgba(255, 61, 113, 0.1); border: 1px solid rgba(255, 61, 113, 0.4); border-radius: 30px; padding: 0.6rem 1.4rem; display: flex; align-items: center; gap: 0.6rem; white-space: nowrap;">
+            <div
+                style="background: rgba(255, 61, 113, 0.1); border: 1px solid rgba(255, 61, 113, 0.4); border-radius: 30px; padding: 0.6rem 1.4rem; display: flex; align-items: center; gap: 0.6rem; white-space: nowrap;">
                 <span style="font-size: 1rem;">👇</span>
-                <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent-pink); text-transform: uppercase; letter-spacing: 0.08em;">Poi scegli il tuo canone mensile</span>
+                <span
+                    style="font-size: 0.8rem; font-weight: 700; color: var(--accent-pink); text-transform: uppercase; letter-spacing: 0.08em;">Poi
+                    scegli il tuo canone mensile</span>
             </div>
             <div style="flex: 1; height: 1px; background: rgba(0, 229, 255, 0.2);"></div>
         </div>
 
-        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-            
+        <div
+            style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
             <!-- ENTRY Plan -->
-            <div class="feature-card" style="background: var(--bg-card); border: 1px solid rgba(0, 229, 255, 0.2); display: flex; flex-direction: column;">
+            <div class="feature-card"
+                style="background: var(--bg-card); border: 1px solid rgba(0, 229, 255, 0.2); display: flex; flex-direction: column;">
                 <div style="text-align: center; margin-bottom: 2rem;">
-                    <div style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.8rem;">ENTRY</div>
-                    <div style="font-size: 1.3rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Starter</div>
-                    <div style="font-size: 3.5rem; font-weight: 800; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">€97</div>
+                    <div
+                        style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.8rem;">
+                        ENTRY</div>
+                    <div
+                        style="font-size: 1.3rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                        Starter</div>
+                    <div
+                        style="font-size: 3.5rem; font-weight: 800; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">
+                        €97</div>
                     <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.4rem;">al mese</div>
                 </div>
-                <p style="color: var(--text-secondary); font-size: 0.95rem; text-align: center; margin-bottom: 2rem; line-height: 1.6;">L'essenziale: Automazione richieste via SMS/WhatsApp e Dashboard base.</p>
+                <p
+                    style="color: var(--text-secondary); font-size: 0.95rem; text-align: center; margin-bottom: 2rem; line-height: 1.6;">
+                    L'essenziale: Automazione richieste via SMS/WhatsApp e Dashboard base.</p>
                 <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; flex: 1;">
                     <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
                         <span style="color: var(--success); font-size: 1.1rem; flex-shrink: 0;">✓</span>
-                        <span style="color: var(--text-secondary); font-size: 0.95rem;">Automazione richieste SMS & WhatsApp</span>
+                        <span style="color: var(--text-secondary); font-size: 0.95rem;">Automazione richieste SMS &
+                            WhatsApp</span>
                     </li>
                     <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
                         <span style="color: var(--success); font-size: 1.1rem; flex-shrink: 0;">✓</span>
-                        <span style="color: var(--text-secondary); font-size: 0.95rem;">Dashboard base di monitoraggio</span>
+                        <span style="color: var(--text-secondary); font-size: 0.95rem;">Dashboard base di
+                            monitoraggio</span>
                     </li>
                     <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
                         <span style="color: var(--success); font-size: 1.1rem; flex-shrink: 0;">✓</span>
-                        <span style="color: var(--text-secondary); font-size: 0.95rem;">Integrazione Google Business Profile</span>
+                        <span style="color: var(--text-secondary); font-size: 0.95rem;">Integrazione Google Business
+                            Profile</span>
                     </li>
                 </ul>
-                <a href="#demo" class="btn-secondary" style="text-align: center; margin-top: 2rem; padding: 1rem 2rem; font-size: 1rem;">Inizia con Starter</a>
+                <a href="#demo" class="btn-secondary"
+                    style="text-align: center; margin-top: 2rem; padding: 1rem 2rem; font-size: 1rem;">Inizia con
+                    Starter</a>
             </div>
 
             <!-- PRO Plan -->
-            <div class="feature-card" style="background: linear-gradient(135deg, rgba(0, 229, 255, 0.1), rgba(181, 55, 242, 0.1)); border: 3px solid var(--accent-cyan); position: relative; display: flex; flex-direction: column; padding-top: 3.5rem;">
-                <div style="position: absolute; top: -1px; left: 50%; transform: translateX(-50%); background: var(--accent-cyan); color: #0f0f0f; padding: 0.5rem 1.8rem; border-radius: 0 0 16px 16px; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; white-space: nowrap; letter-spacing: 0.05em;">⭐ Più Popolare</div>
+            <div class="feature-card"
+                style="background: linear-gradient(135deg, rgba(0, 229, 255, 0.1), rgba(181, 55, 242, 0.1)); border: 3px solid var(--accent-cyan); position: relative; display: flex; flex-direction: column; padding-top: 3.5rem;">
+                <div
+                    style="position: absolute; top: -1px; left: 50%; transform: translateX(-50%); background: var(--accent-cyan); color: #0f0f0f; padding: 0.5rem 1.8rem; border-radius: 0 0 16px 16px; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; white-space: nowrap; letter-spacing: 0.05em;">
+                    ⭐ Più Popolare</div>
                 <div style="text-align: center; margin-bottom: 2rem;">
-                    <div style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.8rem;">PRO</div>
-                    <div style="font-size: 1.3rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Growth</div>
-                    <div style="font-size: 3.5rem; font-weight: 800; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">€147</div>
+                    <div
+                        style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.8rem;">
+                        PRO</div>
+                    <div
+                        style="font-size: 1.3rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                        Growth</div>
+                    <div
+                        style="font-size: 3.5rem; font-weight: 800; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">
+                        €147</div>
                     <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.4rem;">al mese</div>
                 </div>
-                <p style="color: var(--text-secondary); font-size: 0.95rem; text-align: center; margin-bottom: 2rem; line-height: 1.6;">Starter + Filtro Salvavita: Include il "Review Gating" (filtro 1-3 stelle) e il QR Code fisico personalizzato.</p>
+                <p
+                    style="color: var(--text-secondary); font-size: 0.95rem; text-align: center; margin-bottom: 2rem; line-height: 1.6;">
+                    Starter + Filtro Salvavita: Include il "Review Gating" (filtro 1-3 stelle) e il QR Code fisico
+                    personalizzato.</p>
                 <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; flex: 1;">
                     <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
                         <span style="color: var(--success); font-size: 1.1rem; flex-shrink: 0;">✓</span>
@@ -1257,29 +1625,43 @@
                     </li>
                     <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
                         <span style="color: var(--success); font-size: 1.1rem; flex-shrink: 0;">✓</span>
-                        <span style="color: var(--text-secondary); font-size: 0.95rem;">Review Gating — filtro recensioni 1-3 stelle</span>
+                        <span style="color: var(--text-secondary); font-size: 0.95rem;">Review Gating — filtro
+                            recensioni 1-3 stelle</span>
                     </li>
                     <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
                         <span style="color: var(--success); font-size: 1.1rem; flex-shrink: 0;">✓</span>
-                        <span style="color: var(--text-secondary); font-size: 0.95rem;">QR Code fisico personalizzato</span>
+                        <span style="color: var(--text-secondary); font-size: 0.95rem;">QR Code fisico
+                            personalizzato</span>
                     </li>
                     <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
                         <span style="color: var(--success); font-size: 1.1rem; flex-shrink: 0;">✓</span>
-                        <span style="color: var(--text-secondary); font-size: 0.95rem;">Protezione reputazione avanzata</span>
+                        <span style="color: var(--text-secondary); font-size: 0.95rem;">Protezione reputazione
+                            avanzata</span>
                     </li>
                 </ul>
-                <a href="#demo" class="btn-primary" style="text-align: center; margin-top: 2rem; padding: 1rem 2rem; font-size: 1rem;">Inizia con Growth</a>
+                <a href="#demo" class="btn-primary"
+                    style="text-align: center; margin-top: 2rem; padding: 1rem 2rem; font-size: 1rem;">Inizia con
+                    Growth</a>
             </div>
 
             <!-- ELITE Plan -->
-            <div class="feature-card" style="background: linear-gradient(135deg, rgba(181, 55, 242, 0.1), rgba(0, 229, 255, 0.05)); border: 2px solid rgba(181, 55, 242, 0.5); display: flex; flex-direction: column;">
+            <div class="feature-card"
+                style="background: linear-gradient(135deg, rgba(181, 55, 242, 0.1), rgba(0, 229, 255, 0.05)); border: 2px solid rgba(181, 55, 242, 0.5); display: flex; flex-direction: column;">
                 <div style="text-align: center; margin-bottom: 2rem;">
-                    <div style="font-size: 0.8rem; color: var(--accent-purple); font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.8rem;">ELITE</div>
-                    <div style="font-size: 1.3rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Full-Manage</div>
-                    <div style="font-size: 3.5rem; font-weight: 800; background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">€197</div>
+                    <div
+                        style="font-size: 0.8rem; color: var(--accent-purple); font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.8rem;">
+                        ELITE</div>
+                    <div
+                        style="font-size: 1.3rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                        Full-Manage</div>
+                    <div
+                        style="font-size: 3.5rem; font-weight: 800; background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">
+                        €197</div>
                     <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.4rem;">al mese</div>
                 </div>
-                <p style="color: var(--text-secondary); font-size: 0.95rem; text-align: center; margin-bottom: 2rem; line-height: 1.6;">Growth + AI & Risposte: ChatGPT risponde alle recensioni e ricevi un report mensile di analisi.</p>
+                <p
+                    style="color: var(--text-secondary); font-size: 0.95rem; text-align: center; margin-bottom: 2rem; line-height: 1.6;">
+                    Growth + AI & Risposte: ChatGPT risponde alle recensioni e ricevi un report mensile di analisi.</p>
                 <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; flex: 1;">
                     <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
                         <span style="color: var(--success); font-size: 1.1rem; flex-shrink: 0;">✓</span>
@@ -1287,34 +1669,151 @@
                     </li>
                     <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
                         <span style="color: var(--success); font-size: 1.1rem; flex-shrink: 0;">✓</span>
-                        <span style="color: var(--text-secondary); font-size: 0.95rem;">ChatGPT risponde automaticamente alle recensioni</span>
+                        <span style="color: var(--text-secondary); font-size: 0.95rem;">ChatGPT risponde automaticamente
+                            alle recensioni</span>
                     </li>
                     <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
                         <span style="color: var(--success); font-size: 1.1rem; flex-shrink: 0;">✓</span>
-                        <span style="color: var(--text-secondary); font-size: 0.95rem;">Report mensile di analisi dettagliato</span>
+                        <span style="color: var(--text-secondary); font-size: 0.95rem;">Report mensile di analisi
+                            dettagliato</span>
                     </li>
                     <li style="display: flex; align-items: flex-start; gap: 0.8rem;">
                         <span style="color: var(--success); font-size: 1.1rem; flex-shrink: 0;">✓</span>
-                        <span style="color: var(--text-secondary); font-size: 0.95rem;">Gestione completa della reputazione</span>
+                        <span style="color: var(--text-secondary); font-size: 0.95rem;">Gestione completa della
+                            reputazione</span>
                     </li>
                 </ul>
-                <a href="#demo" style="text-align: center; margin-top: 2rem; padding: 1rem 2rem; font-size: 1rem; background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan)); color: white; border-radius: 50px; text-decoration: none; font-weight: 700; display: block; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(181, 55, 242, 0.4);">Inizia con Full-Manage</a>
+                <a href="#demo"
+                    style="text-align: center; margin-top: 2rem; padding: 1rem 2rem; font-size: 1rem; background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan)); color: white; border-radius: 50px; text-decoration: none; font-weight: 700; display: block; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(181, 55, 242, 0.4);">Inizia
+                    con Full-Manage</a>
             </div>
         </div>
     </section>
 
     <section class="features-section" style="background: var(--bg-dark); padding-top: 0; padding-bottom: 4rem;">
         <!-- ROI Calculation -->
-        <div style="max-width: 800px; margin: 4rem auto 0; text-align: center; background: var(--bg-card); border: 1px solid rgba(0, 229, 255, 0.2); border-radius: 20px; padding: 3rem;">
-            <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--text-primary);">💡 Il calcolo è semplice</h3>
+        <div
+            style="max-width: 800px; margin: 4rem auto 0; text-align: center; background: var(--bg-card); border: 1px solid rgba(0, 229, 255, 0.2); border-radius: 20px; padding: 3rem;">
+            <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--text-primary);">💡 Il calcolo è semplice
+            </h3>
             <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
-                Se il tuo servizio vale <strong style="color: var(--accent-cyan);">€5.000-€20.000</strong> per cliente, 
-                ti basta <strong style="color: var(--accent-cyan);">1-2 clienti in più all'anno</strong> per coprire 
+                Se il tuo servizio vale <strong style="color: var(--accent-cyan);">€5.000-€20.000</strong> per cliente,
+                ti basta <strong style="color: var(--accent-cyan);">1-2 clienti in più all'anno</strong> per coprire
                 l'investimento totale. Il resto è <strong style="color: var(--success);">profitto puro</strong>.
             </p>
             <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
                 <a href="#demo" class="btn-primary">Richiedi Demo Gratuita</a>
-                <a href="https://wa.me/393917052423?text=Ciao!%20Vorrei%20info%20su%20ReputazioneAI" class="btn-secondary" target="_blank">Contattaci su WhatsApp</a>
+                <a href="https://wa.me/393917052423?text=Ciao!%20Vorrei%20info%20su%20ReputazioneAI"
+                    class="btn-secondary" target="_blank">Contattaci su WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="features-section" id="testimonials"
+        style="background: var(--bg-dark); border-top: 1px solid rgba(255, 255, 255, 0.05);">
+        <div class="section-header">
+            <span class="section-tag">Casi di Successo</span>
+            <h2 class="section-title">Cosa dicono i nostri clienti</h2>
+            <p class="section-subtitle">
+                Risultati reali da attività locali che hanno trasformato la loro reputazione
+            </p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">
+                    "Prima elemosinavo recensioni ai clienti senza successo. Da quando uso ReputazioneAI le recensioni a
+                    5 stelle arrivano da sole. In 2 mesi ne abbiamo ricevute più che in 3 anni."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">M</div>
+                    <div class="author-info">
+                        <h4>Marco R.</h4>
+                        <p>Titolare Ristorante</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">
+                    "Il filtro salvavita ci ha letteralmente salvato due volte da recensioni negative di clienti
+                    incompresi. Abbiamo risolto il problema in privato e uno di loro ci ha poi lasciato 5 stelle!"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">E</div>
+                    <div class="author-info">
+                        <h4>Elena S.</h4>
+                        <p>Clinica Odontoiatrica</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">
+                    "La cosa migliore è che non devo fare nulla. Zero sforzo, configuri e ti dimentichi. I nuovi clienti
+                    arrivano dicendo 'vi ho scelti per le recensioni su Google'. Vale ogni centesimo."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">G</div>
+                    <div class="author-info">
+                        <h4>Giovanni L.</h4>
+                        <p>Autofficina</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="features-section" id="faq" style="background: var(--bg-secondary);">
+        <div class="section-header">
+            <span class="section-tag">Domande Frequenti</span>
+            <h2 class="section-title">Tutto quello che devi sapere</h2>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    Devo avere competenze tecniche per usarlo?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Assolutamente no. Il sistema è progettato per essere "chiavi in mano". Durante il setup iniziale,
+                    configuriamo tutto noi per te, inclusa l'integrazione con il tuo gestionale se possibile, o
+                    impostando un flusso semplicissimo che chiunque nel tuo team può usare in 3 secondi.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Cosa succede se un cliente vuole lasciare una recensione negativa?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Con i piani Growth ed Elite attiviamo il "Review Gating". Se il cliente clicca su 1, 2 o 3 stelle
+                    nel messaggio che riceve, non viene mandato su Google, ma uscirà un modulo di feedback privato che
+                    arriverà solo alla tua email. Potrai risolvere il problema privatamente.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Posso usarlo per più di una sede lavorativa?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Certamente. ReputazioneAI supporta multi-sede. Ogni sede avrà i propri KPI, messaggi personalizzati
+                    e link specifici della rispettiva pagina Google Business. Contattaci per sbloccare i prezzi
+                    dedicati.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    E se i miei clienti non usano WhatsApp?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Il nostro sistema usa un approccio ibrido ottimizzato: manda prima un messaggio su WhatsApp e, se il
+                    numero non ha WhatsApp o preferisci usare SMS tradizionali, possiamo farlo tramite SMS.
+                </div>
             </div>
         </div>
     </section>
@@ -1324,7 +1823,7 @@
         <div class="cta-content">
             <h2>Pronto a dominare Google Maps?</h2>
             <p>
-                Richiedi una demo gratuita. Configuriamo tutto in 48 ore. 
+                Richiedi una demo gratuita. Configuriamo tutto in 48 ore.
                 Nessun impegno, nessuna carta di credito richiesta.
             </p>
             <div class="hero-cta-group" style="justify-content: center;">
@@ -1346,21 +1845,19 @@
                                 <stop offset="100%" style="stop-color:#b537f2;stop-opacity:1" />
                             </linearGradient>
                         </defs>
-                        <path d="M50 10 L61 38 L90 38 L67 55 L78 83 L50 66 L22 83 L33 55 L10 38 L39 38 Z" 
-                              fill="url(#footerLogoGradient)" 
-                              stroke="url(#footerLogoGradient)" 
-                              stroke-width="2"/>
-                        <circle cx="50" cy="50" r="15" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
-                        <circle cx="50" cy="50" r="4" fill="#ffffff"/>
-                        <line x1="50" y1="35" x2="50" y2="42" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
-                        <line x1="50" y1="58" x2="50" y2="65" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
-                        <line x1="35" y1="50" x2="42" y2="50" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
-                        <line x1="58" y1="50" x2="65" y2="50" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+                        <path d="M50 10 L61 38 L90 38 L67 55 L78 83 L50 66 L22 83 L33 55 L10 38 L39 38 Z"
+                            fill="url(#footerLogoGradient)" stroke="url(#footerLogoGradient)" stroke-width="2" />
+                        <circle cx="50" cy="50" r="15" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" />
+                        <circle cx="50" cy="50" r="4" fill="#ffffff" />
+                        <line x1="50" y1="35" x2="50" y2="42" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+                        <line x1="50" y1="58" x2="50" y2="65" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+                        <line x1="35" y1="50" x2="42" y2="50" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+                        <line x1="58" y1="50" x2="65" y2="50" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
                     </svg>
                     <h3>ReputazioneAI</h3>
                 </div>
                 <p>
-                    Il sistema automatizzato che trasforma i tuoi clienti soddisfatti 
+                    Il sistema automatizzato che trasforma i tuoi clienti soddisfatti
                     in recensioni 5 stelle su Google. Zero sforzo, massimo risultato.
                 </p>
             </div>
@@ -1396,5 +1893,87 @@
             <p>&copy; 2026 ReputazioneAI. Tutti i diritti riservati.</p>
         </div>
     </footer>
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link, .mobile-menu .btn-primary');
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                if (mobileMenu.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+
+        // Stats Counter Animation
+        const statsSection = document.querySelector('.hero-stats');
+        const statNumbers = document.querySelectorAll('.stat-number');
+        let animated = false;
+
+        if (statsSection && statNumbers.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting && !animated) {
+                    animated = true;
+                    statNumbers.forEach(stat => {
+                        const target = +stat.getAttribute('data-target');
+                        const suffix = stat.getAttribute('data-suffix') || '';
+                        const duration = 2000;
+                        const frameDuration = 1000 / 60;
+                        const totalFrames = Math.round(duration / frameDuration);
+                        let frame = 0;
+
+                        const counter = setInterval(() => {
+                            frame++;
+                            const progress = frame / totalFrames;
+                            const easeOut = progress * (2 - progress); // Ease out quad
+                            const currentCount = Math.round(target * easeOut);
+
+                            stat.innerText = currentCount + suffix;
+
+                            if (frame === totalFrames) {
+                                clearInterval(counter);
+                                stat.innerText = target + suffix;
+                            }
+                        }, frameDuration);
+                    });
+                }
+            }, { threshold: 0.1 });
+
+            observer.observe(statsSection);
+        }
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // Close all others
+                faqItems.forEach(faq => faq.classList.remove('active'));
+
+                // If it wasn't active, open it
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
