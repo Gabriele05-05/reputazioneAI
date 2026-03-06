@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReputazioneAI - Recensioni Automatiche</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg-dark: #0f0f0f;
@@ -256,7 +258,7 @@
             background: var(--bg-secondary);
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 
+            box-shadow:
                 0 30px 80px rgba(0, 0, 0, 0.8),
                 0 0 100px rgba(0, 229, 255, 0.2);
             border: 1px solid rgba(0, 229, 255, 0.2);
@@ -282,9 +284,17 @@
             border-radius: 50%;
         }
 
-        .dot.red { background: #ff5f57; }
-        .dot.yellow { background: #ffbd2e; }
-        .dot.green { background: #28ca42; }
+        .dot.red {
+            background: #ff5f57;
+        }
+
+        .dot.yellow {
+            background: #ffbd2e;
+        }
+
+        .dot.green {
+            background: #28ca42;
+        }
 
         .browser-url {
             flex: 1;
@@ -332,8 +342,18 @@
         }
 
         @keyframes slideScreen {
-            0%, 20% { opacity: 1; transform: translateX(0); }
-            25%, 100% { opacity: 0; transform: translateX(-100%); }
+
+            0%,
+            20% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            25%,
+            100% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
         }
 
         /* Dashboard Screen 1: Statistics */
@@ -392,15 +412,41 @@
             animation: growBar 2s ease infinite;
         }
 
-        .chart-bar:nth-child(1) { height: 40%; animation-delay: 0s; }
-        .chart-bar:nth-child(2) { height: 70%; animation-delay: 0.2s; }
-        .chart-bar:nth-child(3) { height: 55%; animation-delay: 0.4s; }
-        .chart-bar:nth-child(4) { height: 85%; animation-delay: 0.6s; }
-        .chart-bar:nth-child(5) { height: 95%; animation-delay: 0.8s; }
+        .chart-bar:nth-child(1) {
+            height: 40%;
+            animation-delay: 0s;
+        }
+
+        .chart-bar:nth-child(2) {
+            height: 70%;
+            animation-delay: 0.2s;
+        }
+
+        .chart-bar:nth-child(3) {
+            height: 55%;
+            animation-delay: 0.4s;
+        }
+
+        .chart-bar:nth-child(4) {
+            height: 85%;
+            animation-delay: 0.6s;
+        }
+
+        .chart-bar:nth-child(5) {
+            height: 95%;
+            animation-delay: 0.8s;
+        }
 
         @keyframes growBar {
-            0%, 100% { transform: scaleY(1); }
-            50% { transform: scaleY(1.1); }
+
+            0%,
+            100% {
+                transform: scaleY(1);
+            }
+
+            50% {
+                transform: scaleY(1.1);
+            }
         }
 
         /* Dashboard Screen 2: Review Flow */
@@ -449,6 +495,7 @@
                 opacity: 0;
                 transform: translateX(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -510,6 +557,7 @@
                 opacity: 0;
                 transform: scale(0.8) translateY(20px);
             }
+
             100% {
                 opacity: 1;
                 transform: scale(1) translateY(0);
@@ -567,6 +615,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -575,8 +624,17 @@
 
         /* Animations */
         @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.1); opacity: 0.8; }
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
         }
 
         @keyframes fadeInLeft {
@@ -584,6 +642,7 @@
                 opacity: 0;
                 transform: translateX(-50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -595,6 +654,7 @@
                 opacity: 0;
                 transform: translateX(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -838,6 +898,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav>
@@ -856,11 +917,11 @@
             <div class="hero-text">
                 <span class="hero-tag">✨ Sistema Automatizzato</span>
                 <h1>
-                    Genera <span class="gradient-text">recensioni 5 stelle</span> 
+                    Genera <span class="gradient-text">recensioni 5 stelle</span>
                     in automatico
                 </h1>
                 <p class="hero-subtitle">
-                    Il sistema intelligente che trasforma ogni cliente soddisfatto 
+                    Il sistema intelligente che trasforma ogni cliente soddisfatto
                     in una recensione Google, senza che tu muova un dito.
                 </p>
                 <div class="hero-stats">
@@ -964,7 +1025,8 @@
                                     <div class="notification-icon">⭐</div>
                                     <div class="notification-content">
                                         <div class="notification-title">Nuova recensione 5 stelle!</div>
-                                        <div class="notification-text">Marco R. ha lasciato una recensione positiva</div>
+                                        <div class="notification-text">Marco R. ha lasciato una recensione positiva
+                                        </div>
                                     </div>
                                     <div class="notification-time">2 min fa</div>
                                 </div>
@@ -996,7 +1058,7 @@
                                         <div class="review-date">2 giorni fa</div>
                                     </div>
                                     <div class="review-text">
-                                        "Servizio eccellente! Personale competente e disponibile. 
+                                        "Servizio eccellente! Personale competente e disponibile.
                                         Consiglio vivamente a tutti."
                                     </div>
                                     <div class="review-author">— Laura B.</div>
@@ -1007,7 +1069,7 @@
                                         <div class="review-date">4 giorni fa</div>
                                     </div>
                                     <div class="review-text">
-                                        "Esperienza fantastica dall'inizio alla fine. 
+                                        "Esperienza fantastica dall'inizio alla fine.
                                         Tornerò sicuramente!"
                                     </div>
                                     <div class="review-author">— Andrea M.</div>
@@ -1034,7 +1096,7 @@
                 <div class="feature-icon">🛡️</div>
                 <h3>Protezione Reputazione</h3>
                 <p>
-                    Intercetta le recensioni negative prima che finiscano su Google. 
+                    Intercetta le recensioni negative prima che finiscano su Google.
                     Trasforma ogni problema in un'opportunità di miglioramento.
                 </p>
             </div>
@@ -1042,7 +1104,7 @@
                 <div class="feature-icon">🤖</div>
                 <h3>AI Integrata</h3>
                 <p>
-                    ChatGPT scrive risposte professionali alle recensioni. 
+                    ChatGPT scrive risposte professionali alle recensioni.
                     Tu approvi con un click, senza perdere tempo.
                 </p>
             </div>
@@ -1050,7 +1112,7 @@
                 <div class="feature-icon">📊</div>
                 <h3>Analytics Avanzati</h3>
                 <p>
-                    Dashboard completa con statistiche, trend e confronto competitivo. 
+                    Dashboard completa con statistiche, trend e confronto competitivo.
                     Monitora il ROI in tempo reale.
                 </p>
             </div>
@@ -1058,7 +1120,7 @@
                 <div class="feature-icon">⚡</div>
                 <h3>Setup Immediato</h3>
                 <p>
-                    Configurazione in 48 ore. Integrazione con il tuo gestionale 
+                    Configurazione in 48 ore. Integrazione con il tuo gestionale
                     o uso stand-alone. Semplicissimo.
                 </p>
             </div>
@@ -1066,7 +1128,7 @@
                 <div class="feature-icon">📱</div>
                 <h3>SMS & WhatsApp</h3>
                 <p>
-                    98% di tasso di apertura. I tuoi clienti ricevono la richiesta 
+                    98% di tasso di apertura. I tuoi clienti ricevono la richiesta
                     dove sono più attivi, al momento perfetto.
                 </p>
             </div>
@@ -1074,7 +1136,7 @@
                 <div class="feature-icon">🎯</div>
                 <h3>Zero Sforzo</h3>
                 <p>
-                    Una volta installato lavora da solo H24. Tu ti concentri 
+                    Una volta installato lavora da solo H24. Tu ti concentri
                     sul tuo business, noi sulla tua reputazione.
                 </p>
             </div>
@@ -1086,11 +1148,11 @@
         <div class="cta-content">
             <h2>Pronto a dominare Google Maps?</h2>
             <p>
-                Richiedi una demo gratuita. Configuriamo tutto in 48 ore. 
+                Richiedi una demo gratuita. Configuriamo tutto in 48 ore.
                 Nessun impegno, nessuna carta di credito richiesta.
             </p>
             <div class="hero-cta-group" style="justify-content: center;">
-                <a href="mailto:info@reputazioneai.it" class="btn-primary">Richiedi Demo Gratuita</a>
+                <a href="mailto:info@reputationai.it" class="btn-primary">Richiedi Demo Gratuita</a>
             </div>
         </div>
     </section>
@@ -1101,7 +1163,7 @@
             <div class="footer-brand">
                 <h3>ReputazioneAI</h3>
                 <p>
-                    Il sistema automatizzato che trasforma i tuoi clienti soddisfatti 
+                    Il sistema automatizzato che trasforma i tuoi clienti soddisfatti
                     in recensioni 5 stelle su Google. Zero sforzo, massimo risultato.
                 </p>
             </div>
@@ -1151,4 +1213,5 @@
         });
     </script>
 </body>
+
 </html>
